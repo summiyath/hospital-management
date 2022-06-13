@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <h2>POSTS CREATED</h2>
+
+          {% for i in obj1 %}
+                   <div class="card" style="width: 48rem;">
+
+            <div class="shadow card">
+
+  <div class="card-body">
+
+                        <img class="imgover"  src="{{i.image.url}}" style="height:200px;width:300px;" alt= "" >
+
+<p  style="color:blue;"> <b>{{i.id}}.TITLE:{{i.title}}</b></p>
+          <p style="color:green;">CATEGORY : {{i.categ}}</p>
+
+<p>CONTENT <br>{{i.content|truncatechars:15}}</p>
+<p> SUMMARY <br>{{i.summary}}</p>
+  </div>
+            </div>
+                   </div>
+{% endfor %}
+
+
+</body>
+</html>

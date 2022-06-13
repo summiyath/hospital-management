@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+<h2>PROFILE</h2>
+<p>Username: {{user}}</p>
+<p>firstname : {{user.first_name}}</p>
+<p>last_name : {{user.last_name}}</p>
+<p>address : {{user.address}}</p>
+<p>email: {{user.email}}</p>
+              <img class="imgover"  src="{{user.image.url}}" style="height:200px;width:300px;" alt= "" >
+
+{% endif %}
+
+</body>
+</html>
